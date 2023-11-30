@@ -1,0 +1,23 @@
+Jupyter cell example:
+%matplotlib inline
+
+import pandas
+
+data = pandas.read_csv("gapminder.csv", index_col="country")
+
+years = data.columns.str.strip("gdpPercap_")  # Extract year from last 4 characters of each column name
+data.columns = years.astype(int)              # Convert year values to integers, saving results back to dataframe
+
+data.loc["Australia"].plot()
+
+Pandas example:
+import pandas as pd
+
+mydataset = {
+  'cars': ["BMW", "Volvo", "Ford"],
+  'passings': [3, 7, 2]
+}
+
+myvar = pd.DataFrame(mydataset)
+
+print(myvar)
