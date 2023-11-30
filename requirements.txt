@@ -1,5 +1,5 @@
 numpy==1.25.0
 pandas
 matplotlib
-openai
-os
+#openai
+#os
